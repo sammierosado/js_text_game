@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
 
   function restartGame() {
     currentIndex = 0; // Reset the current index to start the story again from the beginning
-    displayText(""); // Clear the output area
+    displayText("Welcome back, adventurer!"); // Clear the output area and replace with welcome back text
     nextButton.style.display = "block"; // Show the "Next" button
     restartButton.style.display = "none"; // Hide the "Restart" button
     gameLoop(); // Restart the game loop

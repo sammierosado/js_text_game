@@ -3,82 +3,100 @@ body {
 }
 
 h1 {
-    text-align: center;
-  }
-  
-  .container {
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .grid-container img {
-    height: 100px;
-    width: auto;
-    max-width: 100%;
-  }
-  
-  .text-content {
-    grid-column: 1 / -1;
-    margin-top: 20px;
-    
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 400px; /* Set the max-width to adjust the space between buttons */
-    margin: 0 auto; /* Center the buttons horizontally */
-  }
-  
-  /* Styling for the buttons */
-  #useButton, #nextButton, #restartButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #useButton {
-    background-color: #27ae60; /* Set your preferred "Use" button background color */
-    color: #fff;
-    font-family: 'Tektur';
-  }
-  
-  #nextButton {
-    background-color: #3498db; /* Set your preferred "Next" button background color */
-    color: #fff;
-    font-family: 'Tektur';
-  }
+  text-align: center;
+}
 
-  #restartButton {
-    background-color: coral; /* Set your preferred "Restart" button background color */
-    color: #fff;
-    font-family: 'Tektur';
-  }
-  
-  /* Hover effect for the buttons */
-  #useButton:hover, #nextButton:hover {
-    opacity: 0.8;
-  }
+/* .container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+} */
+/* Not needed */
 
-  #restartButton:hover {
-    opacity: 0.8;
-  }
-  
-  /* Disable style for the "Next" button when it's disabled */
-  #nextButton:disabled {
-    background-color: #bdc3c7;
-    cursor: not-allowed;
-  }
-  
+.grid-container {
+  display: grid;
+  height: clamp(100px, 10vh, 10vh);
+  grid-template-columns: repeat(3, min-content);
+  place-items: center;
+  justify-content: center;
+  margin-top: 6vh;
+  grid-gap: 20px;
+  /* border: solid green; */
+  /* BORDER FOR TESTING */
+}
+
+.grid-container > img {
+  /* display: flex; NOT NEEDED*/
+  height: 100px;
+  /* max-width: 100%; NOT NEEDED*/
+  /* border: solid #27ae60; */
+  /* BORDER FOR TESTING */
+}
+
+.text-content {
+  display: grid;
+  place-items: center;
+  /* grid-column: 1 / 2 / 1 / 2; */
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  /* Set the max-width to adjust the space between buttons */
+  margin-top: 7vh;
+  /* Center the buttons horizontally */
+}
+
+.button-container > button {
+  margin: 0 75px;
+  /* 0 is for top/bottom. 75 is for left/right */
+  padding: 10px 20px;
+  font-family: 'Tektur';
+}
+
+/* Styling for the buttons */
+#useButton,
+#nextButton,
+#restartButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: coral;
+  /* Set your preferred "Restart" button background color */
+  color: #fff;
+  /* font-family: 'Tektur'; */
+}
+
+#useButton {
+  background-color: #27ae60;
+  /* Set your preferred "Use" button background color */
+  color: #fff;
+  /* font-family: 'Tektur'; */
+}
+
+#nextButton {
+  background-color: #3498db;
+  /* Set your preferred "Next" button background color */
+  color: #fff;
+  /* font-family: 'Tektur'; */
+}
+
+/* Hover effect for the buttons */
+#useButton:hover,
+#nextButton:hover {
+  opacity: 0.8;
+}
+
+#restartButton:hover {
+  opacity: 0.8;
+}
+
+/* Disable style for the "Next" button when it's disabled */
+#nextButton:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
