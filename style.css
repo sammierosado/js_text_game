@@ -1,53 +1,84 @@
+body {
+  font-family: 'Tektur';
+}
+
 h1 {
     text-align: center;
-}
-
-img {
-    height: 100px;
-    width: auto;
-    position: absolute;
-    top: 20%; /* Center the image vertically */
-    left: 20%; /* Adjust the left position as needed */
-    transform: translateY(-50%); /* Center the image perfectly */
-}
-
-.container {
-    position: relative; /* Ensure relative positioning for the container */
-    min-height: 100vh;
-    height: 100vh;
+  }
+  
+  .container {
+    height: 50vh;
     display: flex;
     justify-content: center;
-}
-
-.grid-container {
+  }
+  
+  .grid-container {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-}
-
-.text-content {
-    /* Add any additional styles for the text container here */
-}
-
-/* Styling for the button */
-button {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .grid-container img {
+    height: 100px;
+    width: auto;
+    max-width: 100%;
+  }
+  
+  .text-content {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px; /* Set the max-width to adjust the space between buttons */
+    margin: 0 auto; /* Center the buttons horizontally */
+  }
+  
+  /* Styling for the buttons */
+  #useButton, #nextButton, #restartButton {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
     border: none;
-    background-color: #3498db;
-    color: #fff;
     border-radius: 5px;
     cursor: pointer;
-}
+  }
+  
+  #useButton {
+    background-color: #27ae60; /* Set your preferred "Use" button background color */
+    color: #fff;
+    font-family: 'Tektur';
+  }
+  
+  #nextButton {
+    background-color: #3498db; /* Set your preferred "Next" button background color */
+    color: #fff;
+    font-family: 'Tektur';
+  }
 
-/* Hover effect for the button */
-#nextButton:hover {
-    background-color: #2980b9;
-}
+  #restartButton {
+    background-color: coral; /* Set your preferred "Restart" button background color */
+    color: #fff;
+    font-family: 'Tektur';
+  }
+  
+  /* Hover effect for the buttons */
+  #useButton:hover, #nextButton:hover {
+    opacity: 0.8;
+  }
 
-/* Disable style for the button when it's disabled */
-#nextButton:disabled {
+  #restartButton:hover {
+    opacity: 0.8;
+  }
+  
+  /* Disable style for the "Next" button when it's disabled */
+  #nextButton:disabled {
     background-color: #bdc3c7;
     cursor: not-allowed;
-}
+  }
+  

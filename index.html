@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryuuki: The Forest Guardian</title>
     <link rel="stylesheet" href="style.css">
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+</head>
 
-  <body>
+<body>
     <h1>Ryuuki: The Forest Guardian</h1>
-
     <div class="container">
-      <div class="grid-container">
-        <img src="squirrel.png" alt="pixelated squirrel" title="I'm nuts">
-        <div class="text-content">
-          <div id="output">
-            <!-- The story will be displayed here -->
-          </div>
-          <button id="nextButton">Next</button>
-          <button id="restartButton" style="display: none;">Restart</button>
+        <div class="grid-container">
+            <img src="images/squirrel.png" alt="pixelated squirrel" title="I'm nuts">
+            <img src="images/dog.png" alt="pixelated dog" title="SQUIRREL!!">
+            <img src="images/pig.png" alt="pixelated pig" title="You're under arrest.">
+            <div class="text-content">
+                <p id="output">Welcome adventurer!</p>
+            </div>
         </div>
-      </div>
+    </div>
+    <div class="button-container">
+        <button id="useButton">Use</button>
+        <button id ="restartButton" style="display: none;">Restart</button>
+        <button id="nextButton">Next</button>
     </div>
 
-
-
     <div id="output"></div>
-    <input type="text" id="input" autofocus>
     <script src="game.js"></script>
-  </body>
+</body>
 
 </html>
